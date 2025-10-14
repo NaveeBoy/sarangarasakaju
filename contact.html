@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>අප හා සම්බන්ධ වන්න / Contact - සාරංගා රස කජු</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f5f0;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background:#222;
+      color:white;
+      font-family:sans-serif;
+      padding:15px 20px;
+      position:sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    }
+    nav .container {
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav .logo {
+      font-family:'Playfair Display', serif;
+      font-size:1.5em;
+      font-weight:bold;
+      color:#ffb400;
+    }
+    nav .nav-links a {
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      margin:0 10px;
+      transition:0.3s;
+    }
+    nav .nav-links a:hover {
+      color:#ffb400;
+    }
+    nav .nav-socials a {
+      color:white;
+      margin-left:8px;
+      font-size:1.2em;
+      transition:0.3s;
+    }
+    nav .nav-socials a:hover {
+      color:#ffb400;
+    }
+
+    /* Hero Section */
+    .contact-hero {
+      background: url('images/contact-bg.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .contact-hero::after {
+      content: '';
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .contact-hero h1, .contact-hero p {
+      position: relative;
+      z-index: 2;
+    }
+    .contact-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    .contact-hero p {
+      font-size: 1.2em;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 40px;
+      padding: 0 20px;
+    }
+    .contact-form, .contact-info {
+      flex: 1 1 400px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    .contact-form h2, .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+      color: #4d3c2e;
+    }
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    .contact-form button {
+      background: #ffb400;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #e69c00;
+    }
+    .contact-info p, .contact-info a {
+      margin: 10px 0;
+      display: block;
+      font-size: 1em;
+      color: #333;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: #ffb400;
+    }
+
+    /* Social Icons */
+    .socials {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+      font-size: 1.3em;
+    }
+    .socials a {
+      color: #333;
+      transition: 0.3s;
+    }
+    .socials a:hover {
+      color: #ffb400;
+    }
+
+    /* Map */
+    .map {
+      margin-top: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    /* Footer */
+    footer {
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      font-family:sans-serif;
+    }
+    footer .socials a {
+      color:white;
+      margin:0 8px;
+      transition:0.3s;
+      text-decoration:none;
+    }
+    footer .socials a:hover {
+      color:#ffb400;
+    }
+    footer .contact-info a {
+      color:white;
+      text-decoration:none;
+      margin:0 8px;
+    }
+    footer .contact-info a:hover {
+      color:#ffb400;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+      nav .nav-links {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo / Brand -->
+    <div class="logo">සාරංගා රස කජු</div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">මුල් පිටුව / Home</a>
+      <a href="products.html">නිෂ්පාදන / Products</a>
+      <a href="gallery.html">ගැලරිය / Gallery</a>
+      <a href="about.html">අප ගැන / Adout Us</a>
+      <a href="contact.html">අප හා සම්බන්ධ වන්න / Contact</a>
+      <div class="nav-socials">
+        <a href="https://www.facebook.com/share/17PKj5azwz/"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+/* Navbar Styles */
+.navbar {
+  background: #222;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffb400;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover { color: #ffb400; }
+
+/* Socials in nav */
+.nav-socials {
+  display: flex;
+  gap: 10px;
+}
+.nav-socials a {
+  color: white;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+.nav-socials a:hover { color: #ffb400; }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    display: none;
+  }
+  .nav-links.active { display: flex; }
+  .hamburger { display: flex; }
+}
+</style>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <h1>අප හා සම්බන්ධ වන්න / Contact Us</h1>
+    <p>ඔබේ ප්‍රශ්න, අදහස් සහ ඇණවුම් සඳහා අප අමතන්න</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+
+    <div class="contact-form">
+  <h2>පණිවිඩය යවන්න / Send a Message</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="ඔබගේ නම / Your Name" required>
+    <input type="email" name="email" placeholder="ඔබගේ ඊමේල් / Your Email" required>
+    <textarea name="message" rows="5" placeholder="පණිවිඩය / Your Message" required></textarea>
+    <button type="submit">පණිවිඩය යවන්න / Send Message</button>
+  </form>
+  <p id="form-message" style="margin-top:10px;"></p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("RoiHS-Exqv2nfblao"); // Replace with your EmailJS Public Key
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
+    const currentTime = new Date().toLocaleString();
+
+    // Send EmailJS email
+    emailjs.send("service_dmytgjh", "template_kup2449", {
+      title: "New Message from Saranga Cashew Website",
+      name: name,
+      time: currentTime,
+      message: message,
+      reply_to: email
+    }).then(function(response) {
+      document.getElementById("form-message").textContent = "✅ Message sent successfully!";
+      document.getElementById("contactForm").reset();
+    }, function(error) {
+      document.getElementById("form-message").textContent = "❌ Failed to send message. Try again later.";
+      console.error("EmailJS Error:", error);
+    });
+  });
+</script>
+
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>අප සම්බන්ධ කර ගැනීමට / Contact Info</h2>
+      <p><i class="fas fa-map-marker-alt"></i> 9/1, හීදියවල, වේවැල්දෙණිය</p>
+      <p><i class="fas fa-phone"></i> +94 77 810 7243</p>
+      <p><i class="fas fa-envelope"></i> sarangarasakaju@gmail.com</p>
+      <p>
+  <a href="https://wa.me/94778107243" target="_blank" style="color:rgb(0, 0, 0); text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+    <i class="fab fa-whatsapp"></i> +94 77 810 7243
+  </a>
+</p>
+
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <!-- Google Map -->
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d37657.55590472084!2d80.14400442880878!3d7.210812749182914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTInNTAuMCJOIDgwwrAwOCcyOS41IkU!5e0!3m2!1sen!2slk!4v1760447381328!5m2!1sen!2slk" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+ <footer style="background:#222; color:white; padding:30px 20px; text-align:center; font-family:sans-serif;">
+  <p>&copy; 2025 Saranga Cashew. All rights reserved.</p>
+
+  <div class="socials" style="margin:15px 0; display:flex; justify-content:center; gap:15px; font-size:1.2em;">
+    <a href="https://www.facebook.com/share/17PKj5azwz/" style="color:white; text-decoration:none;"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="#" style="color:white; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" style="color:white; text-decoration:none;"><i class="fab fa-youtube"></i> YouTube</a>
+    <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1" style="color:white; text-decoration:none;"><i class="fab fa-tiktok"></i> TikTok</a>
+  </div>
+
+  <div>@sarangarasakaju</div>
+</footer>
+
+
+</body>
+</html>

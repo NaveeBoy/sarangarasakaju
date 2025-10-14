@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>සාරංගා කජු - අපගේ නිෂ්පාදන</title>
+  <style>
+    /* Reset and body */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Fullscreen Video Background */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Optional overlay for readability */
+    .bg-overlay {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+    }
+
+    /* Page content */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      color: #ffebc2;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+
+    p.description {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+      color: #f0e6d2;
+    }
+
+    /* Search Bar */
+    .search-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .search-container input {
+      width: 300px;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .search-container input:focus {
+      border-color: #ffb400;
+      box-shadow: 0 0 8px rgba(255,180,0,0.5);
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: #333;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px 0;
+      font-family: 'Playfair Display', serif;
+      color: #4d3c2e;
+    }
+
+    .product-card h4 {
+      margin: 0 0 10px 0;
+      font-weight: normal;
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    .product-card p {
+      font-size: 0.95em;
+      padding: 0 15px 10px 15px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .product-card .price {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #ffb400;
+      font-size: 1.1em;
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      .search-container input { width: 80%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo / Brand -->
+    <div class="logo">සාරංගා රස කජු</div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">මුල් පිටුව / Home</a>
+      <a href="products.html">නිෂ්පාදන / Products</a>
+      <a href="gallery.html">ගැලරිය / Gallery</a>
+      <a href="about.html">අප ගැන / Adout Us</a>
+      <a href="contact.html">අප හා සම්බන්ධ වන්න / Contact</a>
+      <div class="nav-socials">
+        <a href="https://www.facebook.com/share/17PKj5azwz/"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+/* Navbar Styles */
+.navbar {
+  background: #222;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffb400;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover { color: #ffb400; }
+
+/* Socials in nav */
+.nav-socials {
+  display: flex;
+  gap: 10px;
+}
+.nav-socials a {
+  color: white;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+.nav-socials a:hover { color: #ffb400; }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    display: none;
+  }
+  .nav-links.active { display: flex; }
+  .hamburger { display: flex; }
+}
+</style>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/product page.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="bg-overlay"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>අපගේ නිෂ්පාදන</h1>
+    <p class="description">අපගේ උසස් තත්ත්වයේ කජු වර්ග: ඩෙවල්, ලුණු දැමූ, අවන්, අමු සහ තවත් බොහෝ!</p>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="සෙවීම... (නම/වර්ගය)">
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="productGrid">
+      <div class="product-card" data-name="ඩෙවල් කජු Devilled Cashew">
+        <img src="images\products\ඩෙවල් කජු price 6800.jpg" alt="ඩෙවල් කජු">
+        <h3>ඩෙවල් කජු</h3>
+        <h4>Devilled Cashew</h4>
+        <p>රසවත්, සුපිරි ස්පයිසි කජු, කෑම සමග හොඳයි.</p>
+        <div class="price">රු 6800 / 1 Kg</div>
+      </div>
+
+      <div class="product-card" data-name="ලුණු දැමූ කජු Salted Cashew">
+        <img src="images\products\ලුණු දැමූ කජු price 6800.jpg" alt="ලුණු දැමූ කජු">
+        <h3>ලුණු දැමූ කජු</h3>
+        <h4>Salted Cashew</h4>
+        <p>සාමාන්‍ය රස සහිත, රසවත් ලුණු දැමූ කජු.</p>
+        <div class="price">රු 6800 / 1 Kg</div>
+      </div>
+
+      <div class="product-card" data-name="අවන් කජු Oven Cashew">
+        <img src="images\products\අවන් කජු price 6500.jpg" alt="අවන් කජු">
+        <h3>අවන් කජු</h3>
+        <h4>Oven Cashew</h4>
+        <p>හොඳම උණුසුම් තත්ත්වයෙන් අවන් කරන ලද කජු.</p>
+        <div class="price">රු 6500 / 1 Kg</div>
+      </div>
+
+      <div class="product-card" data-name="අමු කජු Raw Cashew">
+        <img src="images\products\අමු කජු price 6000.jpg" alt="අමු කජු">
+        <h3>අමු කජු</h3>
+        <h4>Raw Cashew</h4>
+        <p>නවතම, පෝෂණීය, අමු කජු, කෑම සඳහා සුදුසු.</p>
+        <div class="price">රු 6000 / 1 Kg</div>
+      </div>
+
+      <div class="product-card" data-name="ගම්මිරිස් රස කජු Pepper Cashew">
+        <img src="images\products\ගම්මිරිස් රස කජු price 6900.jpg" alt="ගම්මිරිස් රස කජු">
+        <h3>ගම්මිරිස් රස කජු</h3>
+        <h4>Pepper Cashew</h4>
+        <p>පිරිසිදු ගම්මිරිස් රසයෙන් රසවත් කජු.</p>
+        <div class="price">රු 6900 / 1 Kg</div>
+      </div>
+
+      <div class="product-card" data-name="පුච්චපු කජු Roasted Cashew">
+        <img src="images\products\පුච්චපු කජු price 6500.jpg" alt="පුච්චපු කජු">
+        <h3>පුච්චපු කජු</h3>
+        <h4>Roasted Cashew</h4>
+        <p>රෝස්ට් කළ, කහක් රසවත් කජු.</p>
+        <div class="price">රු 6500 / 1 Kg</div>
+      </div>
+
+       <div class="product-card" data-name="ගම්මිරිස් රස කජු Pepper Cashew">
+        <img src="images\products\සීනි තැවරූ කජු price 6700.jpg" alt="ගම්මිරිස් රස කජු">
+        <h3>සීනි තැවරූ කජු </h3>
+        <h4>Pepper Cashew</h4>
+        <p>පැනි රසයෙන් රසවත් කජු.</p>
+        <div class="price">රු 6700 / 1 Kg</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Search Functionality -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const productGrid = document.getElementById('productGrid');
+    const productCards = productGrid.getElementsByClassName('product-card');
+
+    searchInput.addEventListener('keyup', function() {
+      const filter = searchInput.value.toLowerCase();
+      for (let i = 0; i < productCards.length; i++) {
+        let name = productCards[i].dataset.name.toLowerCase();
+        if(name.includes(filter)) {
+          productCards[i].style.display = '';
+        } else {
+          productCards[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+<!-- Include Font Awesome CDN in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<footer style="background:#222;color:white;text-align:center;padding:30px 20px;font-family:sans-serif;">
+  <p>&copy; 2025 Saranga Cashew. All rights reserved.</p>
+
+  <!-- Social Media -->
+  <div class="socials" style="margin:10px 0; font-size:1.2em; line-height:2;">
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-youtube"></i> YouTube</a>
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-tiktok"></i> TikTok</a>
+  </div>
+<div>@sarangarasakaju</div>
+  <!-- Contact Info -->
+  <div class="contact-info" style="margin-top:15px; font-size:1em; line-height:1.8;">
+    <a href="mailto:your-email@gmail.com" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-envelope"></i> sarangarasakaju@gmail.com</a>
+    <a href="https://wa.me/94778107243" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-whatsapp"></i> +94778107243</a>
+    <a href="tel:+94332276198" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-phone"></i> 0332276198</a>
+    <a href="https://maps.app.goo.gl/ohJ43p6NHK6EG4e69" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-map-marker-alt"></i> 9/1, හීදියවල ,වේවැල්දෙණිය</a>
+  </div>
+</footer>
+
+<!-- Product Modal -->
+<!-- Product Modal -->
+<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:10000; padding:20px;">
+  <div style="background:white; border-radius:15px; max-width:400px; width:90%; position:relative; text-align:center; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+    <span id="modalClose" style="position:absolute; top:10px; right:15px; font-size:25px; font-weight:bold; cursor:pointer;">&times;</span>
+    <img id="modalImage" src="" alt="" style="width:80%; height:auto; object-fit:cover; margin:15px auto; display:block; border-radius:10px; border-bottom:1px solid #ddd;">
+    <h3 id="modalTitle" style="margin:10px 0 5px 0; font-family:'Playfair Display', serif; color:#4d3c2e;"></h3>
+    <h4 id="modalSubtitle" style="margin:0 0 10px 0; font-weight:normal; color:#555;"></h4>
+    <p id="modalDescription" style="padding:0 15px 10px 15px; line-height:1.5; color:#555;"></p>
+    <div id="modalPrice" style="font-weight:600; margin-bottom:15px; color:#ffb400; font-size:1.1em;"></div>
+  </div>
+</div>
+
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById('productModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalSubtitle = document.getElementById('modalSubtitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalPrice = document.getElementById('modalPrice');
+  const modalClose = document.getElementById('modalClose');
+
+  // Attach click event to each product card
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      modalImage.src = card.querySelector('img').src;
+      modalTitle.textContent = card.querySelector('h3').textContent;
+      modalSubtitle.textContent = card.querySelector('h4').textContent;
+      modalDescription.textContent = card.querySelector('p').textContent;
+      modalPrice.textContent = card.querySelector('.price').textContent;
+
+      modal.style.display = 'flex';
+    });
+  });
+
+  // Close modal
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the modal content
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal){
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

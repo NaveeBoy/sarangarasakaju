@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - සාරංගා රස කජු</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/cashew-food-nuts-background-in-hand-drawn-style-vector.jpg') center/cover no-repeat;
+    }
+
+    /* Overlay to make text readable */
+    .overlay {
+      background: rgba(255, 248, 240, 0.85);
+      padding: 60px 20px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #333;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s forwards;
+    }
+
+    h1 { font-size: 3em; animation-delay: 0.2s; }
+    h2 { font-size: 2.5em; animation-delay: 0.4s; }
+
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #4d3c2e;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s forwards;
+    }
+
+    p:nth-of-type(1) { animation-delay: 0.6s; }
+    p:nth-of-type(2) { animation-delay: 0.8s; }
+    p:nth-of-type(3) { animation-delay: 1s; }
+    p:nth-of-type(4) { animation-delay: 1.2s; }
+
+    a {
+      color: #ffb400;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #222;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffb400;
+    }
+
+    /* Links */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #ffb400; }
+
+    /* Socials */
+    .nav-socials {
+      display: flex;
+      gap: 10px;
+    }
+    .nav-socials a {
+      color: white;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+    .nav-socials a:hover { color: #ffb400; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Mobile view */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+        display: none;
+      }
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* Animate Hamburger into X when active */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">සාරංගා රස කජු</div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">මුල් පිටුව / Home</a>
+      <a href="products.html">නිෂ්පාදන / Products</a>
+      <a href="gallery.html">ගැලරිය / Gallery</a>
+      <a href="about.html">අප ගැන / About Us</a>
+      <a href="contact.html">අප හා සම්බන්ධ වන්න / Contact</a>
+      <div class="nav-socials">
+        <a href="https://www.facebook.com/share/17PKj5azwz/"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Script -->
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+</script>
+
+<!-- ✅ About Section -->
+<div class="overlay">
+  <h1>සාරංගා රස කජු අප ගැන</h1>
+
+   <section id="about">
+      
+
+      <p><strong>සාරංගා රස කජු</strong> වෙතින් ඔබට ලබා දෙනු ලබන්නේ ශ්‍රී ලංකාවේ හොඳම, පිරිසිදු හා දේශීය කජුමයයි. අපගේ කජු සියල්ලම 
+      <strong>100% ශ්‍රී ලංකාවේ නිෂ්පාදිත</strong> අතර, ආහාර සම්පන්න රස සහ ගුණාත්මකභාවය රැකගනිමින් නිෂ්පාදනය කරනු ලබයි.</p>
+
+      <p>අපි සැපයෙන කජු වර්ගය: <strong>ඩෙවල් කජු, ලුණු දැමූ කජු, අවන් කජු, පුච්චපු කජු, ගම්මිරිස් රස කජු සහ සීනි තැවරූ කජු</strong>.  
+      අපගේ අරමුණ වන්නේ ඔබට <strong>සුපිරි රස, ස්වාභාවික ගුණාත්මකභාවය සහ නිවසේ හදන ලද රසවත් කජු</strong> ලබා දීමයි.</p>
+
+      <p>අපගේ නිෂ්පාදන ආරක්ෂිතව පැකේජ් කරනු ලබන අතර, ඔබගේ අවශ්‍යතාවය අනුව <strong>සිල්ලර සහ තොග මිල</strong> වලින් ලබා ගත හැක.  
+      ඔබට අපගේ කජු <strong>රසවත්, පෝෂණීය, සහ තත්ත්වයෙන් උසස්</strong> බවට විශ්වාසවන්තව රස බලන්න පුළුවන්.</p>
+
+      <p>අපි විශ්වාස කරන දේ වන්නේ: <em>“රස, ගුණ සහ පාරිභෝගික තෘප්තිය”</em>. සාරංගා රස කජු සමඟ ඔබේ කුකුළන්ගේ, මිතුරන්ගේ, සහ ආදරණීයයන්ගේ උත්සව වාසිය උද්යෝගයෙන් පිරවීමට අපි සූදානම්.  
+      දැන්ම ඇණවුම් කර ඔබේ <strong>ශ්‍රී ලංකාවේ නිෂ්පාදිත, පිරිසිදු කජු</strong> රස බලන්න!</p>
+
+      <div style="margin-top:30px;">
+        <p><strong>අමතන්න: </strong>📞 0778107243 | 0332276198</p>
+        <p><strong>ලිපිනය: </strong>9/1, හීදියවල, වේවැල්දෙණිය</p>
+        <p><strong>Email: </strong> <a href="mailto:sarangarasakaju@gmail.com">sarangarasakaju@gmail.com</a></p>
+      </div>
+    </section>
+</div>
+ <!-- Include Font Awesome CDN in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<footer style="background:#222;color:white;text-align:center;padding:30px 20px;font-family:sans-serif;">
+  <p style="color: aliceblue;">&copy; 2025 Saranga Cashew. All rights reserved.</p>
+
+  <!-- Social Media -->
+  <div class="socials" style="margin:10px 0; font-size:1.2em; line-height:2;">
+    <a href="https://www.facebook.com/share/17PKj5azwz/" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-youtube"></i> YouTube</a>
+    <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-tiktok"></i> TikTok</a>
+  </div>
+<div>@sarangarasakaju</div>
+  <!-- Contact Info -->
+  <div class="contact-info" style="margin-top:15px; font-size:1em; line-height:1.8;">
+    <a href="mailto:your-email@gmail.com" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-envelope"></i> sarangarasakaju@gmail.com</a>
+    <a href="https://wa.me/94778107243" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-whatsapp"></i> +94778107243</a>
+    <a href="tel:+94332276198" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-phone"></i> 0332276198</a>
+    <a href="https://maps.app.goo.gl/ohJ43p6NHK6EG4e69" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-map-marker-alt"></i> 9/1, හීදියවල ,වේවැල්දෙණිය</a>
+  </div>
+</footer>
+</body>
+</html>
