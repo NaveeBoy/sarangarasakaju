@@ -1,451 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Saranga Cashew - Premium Natural Cashew Products" />
-  <meta name="keywords" content="cashew, sri lanka, saranga cashew, natural cashews, roasted cashews" />
-  <title>Saranga Cashew</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Saranga Cashew - Premium Natural Cashew Products"
+    />
+    <meta
+      name="keywords"
+      content="cashew, sri lanka, saranga cashew, natural cashews, roasted cashews"
+    />
+    <title>Saranga Cashew</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3712220864735909"
-      crossorigin="anonymous"></script>
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3712220864735909"
+      crossorigin="anonymous"
+    ></script>
 
-
-<style>
-/* Navbar Styles */
-.navbar {
-  background: #222;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-.logo {
-  font-family:'Playfair Display', serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ffb400;
-}
-
-/* Links */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-.nav-links a:hover { color: #ffb400; }
-
-/* Socials in nav */
-.nav-socials {
-  display: flex;
-  gap: 10px;
-}
-.nav-socials a {
-  color: white;
-  font-size: 1.2em;
-  transition: 0.3s;
-}
-.nav-socials a:hover { color: #ffb400; }
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background: #222;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 0;
-    display: none;
-  }
-  .nav-links.active { display: flex; }
-  .hamburger { display: flex; }
-}
-</style>
-
-<script>
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-</script>
-
-</head>
-<body>
-<!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="nav-container">
-    <!-- Logo / Brand -->
-    <div class="logo">සාරංගා රස කජු</div>
-
-    <!-- Hamburger Menu -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Menu Links -->
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">මුල් පිටුව / Home</a>
-      <a href="products.html">නිෂ්පාදන / Products</a>
-      <a href="gallery.html">ගැලරිය / Gallery</a>
-      <a href="about.html">අප ගැන / About Us</a>
-      <a href="contact.html">අප හා සම්බන්ධ වන්න / Contact</a>
-      <div class="nav-socials">
-        <a href="https://www.facebook.com/share/17PKj5azwz/"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-  <header class="hero" style="position:relative;background:url('images/cashew background.jpg') center/cover no-repeat;color:white;text-align:center;padding:120px 20px;overflow:hidden;">
-    
-    <!-- Overlay for readability -->
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);z-index:1;"></div>
-    
-    <!-- Hero Content -->
-    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;">
-      
-      <!-- Logo -->
-      <img src="images/sarangarasakajulogo.png" alt="sarangarasakajulogo" 
-           style="width:150px;height:200px;margin-bottom:0px;transform:scale(0);animation:zoomIn 1s forwards;">
-      
-      <!-- Headings -->
-      <h1 style="
-  margin:10px 0;
-  font-family: 'Playfair Display', serif;
-  font-size:3em;
-  color: #fff;
-  text-shadow:
-     2px 2px 4px rgba(0,0,0,0.6),
-     -2px -2px 4px rgba(0,0,0,0.4);
-  -webkit-text-stroke: 1px #ffffff;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 1s forwards;
-  animation-delay:0.8s;
-">
-  Welcome to <span style="color:#ffd700;">සාරංගා රස කජු</span>
-</h1>
-      <h2 style="color:black:margin:10px 0;text-shadow:1px 1px 5px rgba(0,0,0,0.6);opacity:0;transform:translateY(20px);animation:fadeUp 1s forwards;animation-delay:1.2s;">
-        රස ගුණ පිරි දේශීය අපේම කජු <br>දේශීය කජු මද අඩුම මිලට ලබා ගැනීමට ඇති එකම තැන
-      </h2>
-      <h1>තොග හා සිල්ලරට මිලට</h1>
-    </div>
-    <!-- Animations -->
     <style>
-      @keyframes zoomIn { to { transform: scale(1); } }
-      @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+      /* Navbar Styles */
+      .navbar {
+        background: #222;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ffb400;
+      }
+
+      /* Links */
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .nav-links a:hover {
+        color: #ffb400;
+      }
+
+      /* Socials in nav */
+      .nav-socials {
+        display: flex;
+        gap: 10px;
+      }
+      .nav-socials a {
+        color: white;
+        font-size: 1.2em;
+        transition: 0.3s;
+      }
+      .nav-socials a:hover {
+        color: #ffb400;
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 65px;
+          left: 0;
+          width: 100%;
+          background: #222;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px 0;
+          display: none;
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+      }
     </style>
 
-    <!-- Floating Particles -->
+    
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo / Brand -->
+        <div class="logo">සාරංගා රස කජු</div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">මුල් පිටුව / Home</a>
+          <a href="products.html">නිෂ්පාදන / Products</a>
+          <a href="gallery.html">ගැලරිය / Gallery</a>
+          <a href="about.html">අප ගැන / About Us</a>
+          <a href="contact.html">අප හා සම්බන්ධ වන්න / Contact</a>
+          <div class="nav-socials">
+            <a href="https://www.facebook.com/share/17PKj5azwz/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a
+              href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <script>
-      const hero = document.querySelector('.hero');
-      for(let i=0;i<30;i++){
-        const dot = document.createElement('div');
-        dot.style.position='absolute';
-        dot.style.width=dot.style.height=Math.random()*5+3+'px';
-        dot.style.background='rgba(255,255,255,0.5)';
-        dot.style.borderRadius='50%';
-        dot.style.top=Math.random()*100+'%';
-        dot.style.left=Math.random()*100+'%';
-        dot.style.animation=`float ${5+Math.random()*5}s ease-in-out infinite`;
-        hero.appendChild(dot);
-      }
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    
+    <header
+      class="hero"
+      style="
+        position: relative;
+        background: url('images/cashew background.jpg') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        overflow: hidden;
+      "
+    >
+      <!-- Overlay for readability -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 1;
+        "
+      ></div>
+
+      <!-- Hero Content -->
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <!-- Logo -->
+        <img
+          src="images/sarangarasakajulogo.png"
+          alt="sarangarasakajulogo"
+          style="
+            width: 150px;
+            height: 200px;
+            margin-bottom: 0px;
+            transform: scale(0);
+            animation: zoomIn 1s forwards;
+          "
+        />
+
+        <!-- Headings -->
+        <h1
+          style="
+            margin: 10px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+              -2px -2px 4px rgba(0, 0, 0, 0.4);
+            -webkit-text-stroke: 1px #ffffff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+            animation-delay: 0.8s;
+          "
+        >
+          Welcome to <span style="color: #ffd700">සාරංගා රස කජු</span>
+        </h1>
+        <h2
+          style="color:black:margin:10px 0;text-shadow:1px 1px 5px rgba(0,0,0,0.6);opacity:0;transform:translateY(20px);animation:fadeUp 1s forwards;animation-delay:1.2s;"
+        >
+          රස ගුණ පිරි දේශීය අපේම කජු <br />දේශීය කජු මද අඩුම මිලට ලබා ගැනීමට ඇති
+          එකම තැන
+        </h2>
+        <h1>තොග හා සිල්ලරට මිලට</h1>
+      </div>
+      <!-- Animations -->
+      <style>
+        @keyframes zoomIn {
+          to {
+            transform: scale(1);
+          }
+        }
+        @keyframes fadeUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+
+      <!-- Floating Particles -->
+      <script>
+        const hero = document.querySelector(".hero");
+        for (let i = 0; i < 30; i++) {
+          const dot = document.createElement("div");
+          dot.style.position = "absolute";
+          dot.style.width = dot.style.height = Math.random() * 5 + 3 + "px";
+          dot.style.background = "rgba(255,255,255,0.5)";
+          dot.style.borderRadius = "50%";
+          dot.style.top = Math.random() * 100 + "%";
+          dot.style.left = Math.random() * 100 + "%";
+          dot.style.animation = `float ${
+            5 + Math.random() * 5
+          }s ease-in-out infinite`;
+          hero.appendChild(dot);
+        }
+      </script>
+
+      <style>
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+          .hero img {
+            width: 140px;
+            height: 140px;
+          }
+          h1 {
+            font-size: 2em;
+          }
+          h2 {
+            font-size: 1em;
+          }
+        }
+      </style>
+    </header>
+
+    <section
+      id="about"
+      style="
+        position: relative;
+        padding: 60px 20px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        max-width: 900px;
+        margin: 50px auto;
+        overflow: hidden;
+      "
+    >
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 1;
+          filter: brightness(0.55);
+          border-radius: 20px;
+        "
+      >
+        <source src="images/fall cashew.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <!-- Content -->
+      <div style="position: relative; z-index: 2; color: #fff">
+        <!-- Animated Heading -->
+        <h2
+          style="
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+          "
+        >
+          අපි ගැන
+        </h2>
+
+        <!-- Paragraph -->
+        <p
+          style="
+            max-width: 750px;
+            margin: 0 auto 25px auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+            animation-delay: 0.3s;
+          "
+        >
+          <strong>සාරංගා රස කජු</strong> ඔබට ලබා දේ ශ්‍රී ලංකාවේ හොඳම, ස්වාභාවික
+          රස සහ උසස් තත්ත්වයේ කජු. අපගේ කජු
+          <strong>100% දේශීය නිෂ්පාදිත</strong> සහ රසවත්, පෝෂණීය වේ.
+        </p>
+
+        <!-- Read More Button -->
+        <a
+          href="about.html"
+          style="
+            display: inline-block;
+            background: #3485ff;
+            color: #f7f4f2;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+            animation-delay: 0.5s;
+          "
+          onmouseover="this.style.background='#e69c00'; this.style.color='#fff';"
+          onmouseout="this.style.background='#ffb400'; this.style.color='#4d3c2e';"
+        >
+          වැඩි විස්තර කියවන්න
+        </a>
+      </div>
+
+      <!-- Fade Up Animation -->
+      <style>
+        @keyframes fadeUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </section>
+
+    <section id="products" class="section products-bg">
+      <h2>Our Products</h2>
+
+      <!-- AdSense Ad -->
+      <div style="text-align: center; margin: 20px 0">
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-client="ca-pub-3712220864735909"
+          data-ad-slot="1234567890"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img
+            src="images\products\අමු කජු price 6000.jpg"
+            alt="Devilled Cashew"
+          />
+          <h3>අමු කජු</h3>
+        </div>
+        <div class="product-card">
+          <img
+            src="images\products\පුච්චපු කජු price 6500.jpg"
+            alt="Salted Cashew"
+          />
+          <h3>පුච්චපු කජු</h3>
+        </div>
+        <div class="product-card">
+          <img
+            src="images\products\අවන් කජු price 6500.jpg"
+            alt="Oven Cashew"
+          />
+          <h3>අවන් කජු</h3>
+        </div>
+        <div class="product-card">
+          <img
+            src="images\products\ඩෙවල් කජු price 6800.jpg"
+            alt="Raw Cashew"
+          />
+          <h3>ඩෙවල් කජු</h3>
+        </div>
+      </div>
+      <a href="products.html" class="btn-secondary">View All</a>
+    </section>
+
+    <section id="gallery" class="section gallery-bg">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="product-card">
+          <img src="images\gallery\අමු කජු (Raw Cashew).jpg" alt="Cashew 1" />
+        </div>
+        <div class="product-card">
+          <img
+            src="images\gallery\ඩෙවල් කජු  (Devilled Cashew).jpg"
+            alt="Cashew 2"
+          />
+        </div>
+        <div class="product-card">
+          <img
+            src="images\gallery\අවන් කජු  (Oven Cashew).jpg"
+            alt="Cashew 3"
+          />
+        </div>
+      </div>
+      <a href="gallery.html" class="btn-secondary">View Full Gallery</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact-bg"
+      style="
+        position: relative;
+        overflow: hidden;
+        padding: 60px 20px;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        min-height: 600px;
+      "
+    >
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline class="contact-bg-video">
+        <source src="images/8731105-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <!-- Overlay -->
+      <div
+        class="contact-bg-overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.55);
+          z-index: 1;
+        "
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="contact-content"
+        style="position: relative; z-index: 2; color: #fff"
+      >
+        <h2
+          style="
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          "
+        >
+          අප හා සම්බන්ධ වන්න
+        </h2>
+
+        <form
+          id="contactForm"
+          style="
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+          "
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="ඔබගේ නම / Your Name"
+            required
+            style="
+              padding: 12px;
+              border-radius: 8px;
+              border: 1px solid #ccc;
+              font-size: 1em;
+            "
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="ඔබගේ ඊමේල් / Your Email"
+            required
+            style="
+              padding: 12px;
+              border-radius: 8px;
+              border: 1px solid #ccc;
+              font-size: 1em;
+            "
+          />
+
+          <textarea
+            name="message"
+            placeholder="පණිවිඩය / Your Message"
+            required
+            rows="5"
+            style="
+              padding: 12px;
+              border-radius: 8px;
+              border: 1px solid #ccc;
+              font-size: 1em;
+              resize: none;
+            "
+          ></textarea>
+
+          <button
+            type="submit"
+            style="
+              padding: 12px;
+              background: #ffb400;
+              color: white;
+              font-size: 1.1em;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+            "
+            onmouseover="this.style.background='#e69c00';"
+            onmouseout="this.style.background='#ffb400';"
+          >
+            පණිවිඩය යවන්න / Send Message
+          </button>
+
+          <p id="form-message" style="margin-top: 10px; font-weight: 600"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("RoiHS-Exqv2nfblao"); // ✅ Your EmailJS Public Key
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = this.name.value;
+          const email = this.email.value;
+          const message = this.message.value;
+          const currentTime = new Date().toLocaleString();
+
+          // Send EmailJS Email
+          emailjs
+            .send("service_dmytgjh", "template_kup2449", {
+              title: "New Message from Saranga Cashew Website",
+              name: name,
+              email: email,
+              message: message,
+              time: currentTime,
+              reply_to: email,
+            })
+            .then(
+              function (response) {
+                const msg = document.getElementById("form-message");
+                msg.textContent = "✅ Message sent successfully!";
+                msg.style.color = "green";
+                document.getElementById("contactForm").reset();
+              },
+              function (error) {
+                const msg = document.getElementById("form-message");
+                msg.textContent =
+                  "❌ Failed to send message. Please try again later.";
+                msg.style.color = "red";
+                console.error("EmailJS Error:", error);
+              }
+            );
+        });
     </script>
 
     <style>
-      @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0); }
+      /* Video Background */
+      .contact-bg-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 1;
       }
-      /* Responsive */
-      @media(max-width:768px){
-        .hero img { width:140px;height:140px; }
-        h1 { font-size:2em; }
-        h2 { font-size:1em; }
+
+      /* Optional overlay to improve text readability */
+      .contact-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.35); /* adjust opacity as needed */
+        z-index: 1;
       }
     </style>
-</header>
 
-<section id="about" 
-         style="position: relative; 
-                padding: 60px 20px; 
-                text-align: center; 
-                font-family: 'Poppins', sans-serif; 
-                border-radius: 20px; 
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
-                max-width: 900px; 
-                margin: 50px auto; 
-                overflow: hidden;">
+    <!-- Include Font Awesome CDN in your <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; filter: brightness(0.55); border-radius:20px;">
-    <source src="images/fall cashew.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+    <footer
+      style="
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        font-family: sans-serif;
+      "
+    >
+      <p>&copy; 2025 Saranga Cashew. All rights reserved.</p>
 
-  <!-- Content -->
-  <div style="position: relative; z-index: 2; color: #fff;">
-
-    <!-- Animated Heading -->
-    <h2 style="font-family:'Playfair Display', serif; font-size: 2.5em; margin-bottom: 20px; opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards;">
-      අපි ගැන
-    </h2>
-
-    <!-- Paragraph -->
-    <p style="max-width: 750px; margin: 0 auto 25px auto; font-size: 1.1em; line-height: 1.8; opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; animation-delay: 0.3s;">
-      <strong>සාරංගා රස කජු</strong> ඔබට ලබා දේ ශ්‍රී ලංකාවේ හොඳම, ස්වාභාවික රස සහ උසස් තත්ත්වයේ කජු. අපගේ කජු <strong>100% දේශීය නිෂ්පාදිත</strong> සහ රසවත්, පෝෂණීය වේ.
-    </p>
-
-    <!-- Read More Button -->
-    <a href="about.html" 
-       style="display:inline-block; background:#3485ff; color:#f7f4f2; padding:12px 30px; border-radius:10px; font-weight:600; text-decoration:none; font-size:1.1em; transition:0.3s; opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; animation-delay:0.5s;"
-       onmouseover="this.style.background='#e69c00'; this.style.color='#fff';" 
-       onmouseout="this.style.background='#ffb400'; this.style.color='#4d3c2e';">
-      වැඩි විස්තර කියවන්න
-    </a>
-
-  </div>
-
-  <!-- Fade Up Animation -->
-  <style>
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(20px);}
-      100% { opacity: 1; transform: translateY(0);}
-    }
-  </style>
-
-</section>
-
-
-
-
-
-  <section id="products" class="section products-bg">
-    <h2>Our Products</h2>
-
-     <!-- AdSense Ad -->
-  <div style="text-align:center; margin:20px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3712220864735909"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images\products\අමු කජු price 6000.jpg" alt="Devilled Cashew" />
-        <h3>අමු කජු</h3>
+      <!-- Social Media -->
+      <div
+        class="socials"
+        style="margin: 10px 0; font-size: 1.2em; line-height: 2"
+      >
+        <a
+          href="https://www.facebook.com/share/17PKj5azwz/"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fab fa-facebook-f"></i> Facebook</a
+        >
+        <a href="#" style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fab fa-instagram"></i> Instagram</a
+        >
+        <a href="#" style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fab fa-youtube"></i> YouTube</a
+        >
+        <a
+          href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fab fa-tiktok"></i> TikTok</a
+        >
       </div>
-      <div class="product-card">
-        <img src="images\products\පුච්චපු කජු price 6500.jpg" alt="Salted Cashew" />
-        <h3>පුච්චපු කජු</h3>
+      <div>@sarangarasakaju</div>
+      <!-- Contact Info -->
+      <div
+        class="contact-info"
+        style="margin-top: 15px; font-size: 1em; line-height: 1.8"
+      >
+        <a
+          href="mailto:your-email@gmail.com"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fas fa-envelope"></i> sarangarasakaju@gmail.com</a
+        >
+        <a
+          href="https://wa.me/94778107243"
+          target="_blank"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fab fa-whatsapp"></i> +94778107243</a
+        >
+        <a
+          href="tel:+94332276198"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fas fa-phone"></i> 0332276198</a
+        >
+        <a
+          href="https://maps.app.goo.gl/ohJ43p6NHK6EG4e69"
+          target="_blank"
+          style="color: white; text-decoration: none; margin: 0 8px"
+          ><i class="fas fa-map-marker-alt"></i> 9/1, හීදියවල ,වේවැල්දෙණිය</a
+        >
       </div>
-      <div class="product-card">
-        <img src="images\products\අවන් කජු price 6500.jpg" alt="Oven Cashew" />
-        <h3>අවන් කජු</h3>
-      </div>
-      <div class="product-card">
-        <img src="images\products\ඩෙවල් කජු price 6800.jpg" alt="Raw Cashew" />
-        <h3>ඩෙවල් කජු</h3>
-      </div>
-    </div>
-    <a href="products.html" class="btn-secondary">View All</a>
-  </section>
-
-  <section id="gallery" class="section gallery-bg">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div class="product-card"><img src="images\gallery\අමු කජු (Raw Cashew).jpg" alt="Cashew 1" /></div>
-      <div class="product-card"><img src="images\gallery\ඩෙවල් කජු  (Devilled Cashew).jpg" alt="Cashew 2" /></div>
-      <div class="product-card"><img src="images\gallery\අවන් කජු  (Oven Cashew).jpg" alt="Cashew 3" /></div>
-    </div>
-    <a href="gallery.html" class="btn-secondary">View Full Gallery</a>
-  </section>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact-bg" 
-         style="position:relative; overflow:hidden; padding:60px 20px; text-align:center; font-family:Poppins,sans-serif; min-height:600px;">
-
-  <!-- Background Video --> <video autoplay muted loop playsinline class="contact-bg-video"> <source src="images/8731105-hd_1920_1080_30fps.mp4" type="video/mp4"> Your browser does not support HTML5 video. </video>
-
-  <!-- Overlay -->
-  <div class="contact-bg-overlay" 
-       style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:1;"></div>
-
-  <!-- Content -->
-  <div class="contact-content" style="position:relative; z-index:2; color:#fff;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:2.5em; margin-bottom:20px; color:#fff; text-shadow:1px 1px 5px rgba(0,0,0,0.5);">
-      අප හා සම්බන්ධ වන්න
-    </h2>
-
-    <form id="contactForm" 
-          style="max-width:500px; margin:0 auto; background:rgba(255,255,255,0.95); padding:30px; border-radius:15px;
-                 box-shadow:0 8px 25px rgba(0,0,0,0.15); display:flex; flex-direction:column; gap:15px;">
-      
-      <input type="text" name="name" placeholder="ඔබගේ නම / Your Name" required
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em;">
-      
-      <input type="email" name="email" placeholder="ඔබගේ ඊමේල් / Your Email" required
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em;">
-      
-      <textarea name="message" placeholder="පණිවිඩය / Your Message" required rows="5"
-                style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; resize:none;"></textarea>
-      
-      <button type="submit" 
-              style="padding:12px; background:#ffb400; color:white; font-size:1.1em; border:none; border-radius:8px; 
-                     cursor:pointer; transition:0.3s;" 
-              onmouseover="this.style.background='#e69c00';" 
-              onmouseout="this.style.background='#ffb400';">
-        පණිවිඩය යවන්න / Send Message
-      </button>
-
-      <p id="form-message" style="margin-top:10px; font-weight:600;"></p>
-    </form>
-  </div>
-</section>
-
-<!-- EmailJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("RoiHS-Exqv2nfblao"); // ✅ Your EmailJS Public Key
-  })();
-
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = this.name.value;
-    const email = this.email.value;
-    const message = this.message.value;
-    const currentTime = new Date().toLocaleString();
-
-    // Send EmailJS Email
-    emailjs.send("service_dmytgjh", "template_kup2449", {
-      title: "New Message from Saranga Cashew Website",
-      name: name,
-      email: email,
-      message: message,
-      time: currentTime,
-      reply_to: email
-    }).then(function(response) {
-      const msg = document.getElementById("form-message");
-      msg.textContent = "✅ Message sent successfully!";
-      msg.style.color = "green";
-      document.getElementById("contactForm").reset();
-    }, function(error) {
-      const msg = document.getElementById("form-message");
-      msg.textContent = "❌ Failed to send message. Please try again later.";
-      msg.style.color = "red";
-      console.error("EmailJS Error:", error);
-    });
-  });
-</script>
-
-
-<style>
-/* Video Background */
-.contact-bg-video {
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transform:translate(-50%, -50%);
-  z-index:1;
-}
-
-/* Optional overlay to improve text readability */
-.contact-bg-overlay {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.35); /* adjust opacity as needed */
-  z-index:1;
-}
-</style>
-
-
-
-
- <!-- Include Font Awesome CDN in your <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<footer style="background:#222;color:white;text-align:center;padding:30px 20px;font-family:sans-serif;">
-  <p>&copy; 2025 Saranga Cashew. All rights reserved.</p>
-
-  <!-- Social Media -->
-  <div class="socials" style="margin:10px 0; font-size:1.2em; line-height:2;">
-    <a href="https://www.facebook.com/share/17PKj5azwz/" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-youtube"></i> YouTube</a>
-    <a href="https://www.tiktok.com/@sarangarasakaju?_t=ZS-90W6qgEWAcP&_r=1" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-tiktok"></i> TikTok</a>
-  </div>
-<div>@sarangarasakaju</div>
-  <!-- Contact Info -->
-  <div class="contact-info" style="margin-top:15px; font-size:1em; line-height:1.8;">
-    <a href="mailto:your-email@gmail.com" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-envelope"></i> sarangarasakaju@gmail.com</a>
-    <a href="https://wa.me/94778107243" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fab fa-whatsapp"></i> +94778107243</a>
-    <a href="tel:+94332276198" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-phone"></i> 0332276198</a>
-    <a href="https://maps.app.goo.gl/ohJ43p6NHK6EG4e69" target="_blank" style="color:white;text-decoration:none;margin:0 8px;"><i class="fas fa-map-marker-alt"></i> 9/1, හීදියවල ,වේවැල්දෙණිය</a>
-  </div>
-</footer>
-
-
-</body>
-
+    </footer>
+  </body>
 </html>
